@@ -15,9 +15,9 @@ It can be achieved bu using `cachifest` in this scheme:
 
  ```javascript
  {
-   'client.swf': 'client_v1354729620000203.swf',
-   'assets/bg.swf': 'assets/bg_v1354729620000203.swf',
-   ...
+      'client.swf': 'client_v1354729620000203.swf',
+      'assets/bg.swf': 'assets/bg_v1354729620000203.swf',
+      ...
  }
  ```
  It's usually better to load `manifest.json?rand=...` with some random payload to avoid `manifest.json` caching for sure.
