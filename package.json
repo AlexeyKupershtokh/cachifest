@@ -1,0 +1,19 @@
+{
+  "name": "cachifest",
+  "version": "0.1.0",
+  "description": "A command line tool for watching for a directory and updating manifest files on changes",
+  "main": "cachifest.js",
+  "bin": {
+    "cachifest": "./cachifest.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Alexey Kupershtokh <alexey.kupershtokh@gmail.com>",
+  "license": "BSD",
+  "dependencies": {
+    "chokidar": "~0.4.0",
+    "optimist": "~0.3.5"
+  }
+}
