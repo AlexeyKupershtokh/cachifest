@@ -10,7 +10,7 @@ Each time a file is updated in this directory, `cachifest` assembles an updated 
  3. Developers and admins don't need to run any maintenance scripts after rolling new changes to servers.
 
 It can be achieved bu using `cachifest` in this scheme:
- 1. you run `cachifest` (consider <a href="http://mmonit.com/monit/">monit</a>, <a href="http://supervisord.org/">supervisord</a>, etc.) to monitor a directory. Usually it should be static files dir in your project and it should be accessible via http.
+ 1. you run `cachifest` (consider running it using <a href="http://upstart.ubuntu.com">upstart</a>, <a href="http://mmonit.com/monit/">monit</a>, <a href="http://supervisord.org/">supervisord</a>, etc.) to monitor a directory. Usually it should be static files dir in your project and it should be accessible via http.
  2. an http app (site, flash, etc) loads `manifest.json`:
 
  ```javascript
