@@ -43,3 +43,28 @@ Options:
   --manifest                           [default: "manifest.json"]
   --dir                                [default: "."]
 ```
+
+Nginx snippet
+=============
+
+```
+location /static {
+    location ~ ^(/static/.*)_v[0-9]+(\.(swf|dat|jpeg|jpg|png|gif|ogg|mp3|js|json))$ {
+        expires max;
+        rewrite ^(/static/.*)_v[0-9]+(\..*)$ $1$2 break;
+    }
+}
+```
+
+Supervisord snippet
+===================
+```
+[program:cachifest]
+directory=/var/www/project/htdocs/static
+command=cachifest
+autostart=true
+autorestart=true
+startretries=10
+stdout_logfile=/var/www/project/log/cachifest.txt
+stderr_logfile=/var/www/project/log/cachifest.txt
+```
