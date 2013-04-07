@@ -1,7 +1,7 @@
 cachifest
 =========
 
-This is a command line tool for watching for a directory changes.
+This is a command line tool for watching for directory changes.
 Each time a file is updated in this directory, `cachifest` assembles an updated `manifest.json` file which has a map of file renames 
 
 `cachifest` is useful for making efficient http caching with following features:
